@@ -1,0 +1,96 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                DEFAULTS - MOBILE FIRST
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.container{
+    background-color: blueviolet;
+    width: 100vw; /* 100 viewport width*/
+    height: 100vh; /* 100 viewport height */
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                DEFAULTS STYLING
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width:960px){
+    .container{
+        width: 80%;
+        margin:0 auto; /* margin of 0 on the top and bottom and "automatic" on the left and right */
+        max-width:1260px;
+    }
+}
+
+ul{
+    background-color: pink;
+    display: flex;
+   /* justify-content: flex-end; - this will align the content to the right (or the end of the flex direction)*/
+   /*justify-content: space-evenly; - or space arolund or between will apply a slightly different layout */
+}
+
+li{
+    /* margin:10px; margin is space around an object. it pushes other objects away */
+    padding: 10px; /* padding is space inside an object - it pushes content away from the edge */
+    border-right: 2px solid black; /* borders sits in between padding and margin - you always need three properties size style and colour */
+    background-color: blue;
+    /* list items become flex items because the ul is set to display: flex*/
+    flex-grow: 1;
+}
+
+/* target the last list item using a pseudo class to remove the border */
+li:last-child{
+    border:none;
+}
+
+a{
+    background-color: brown;
+}
